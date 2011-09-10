@@ -1,0 +1,170 @@
+\documentclass[letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage[pdftex]{graphicx}
+\usepackage[top=1.70in,left=1.70in,right=1.75in,bottom=1.75in]{geometry}
+\usepackage[usenames,dvipsnames,dvips]{color}
+\usepackage{verbatim}
+\usepackage{mdwlist}
+\usepackage{listings}
+\renewcommand{\baselinestretch}{1.3}
+
+\begin{document}
+
+\section*{Proposal For}
+
+\subsection*{"The Lettuce Book: acceptance testing in Python"}
+\normalsize\textbf{by Gabriel Falcão} \large{/} \texttt{gabriel@lettuce.it}
+
+\normalsize
+
+This book is intended to be a full guide to lettuce, suitable for
+either developers and product managers.
+
+\noindent
+Developers will be blind tasters of all lettuce internals, and product
+managers will learn how to write down their specifications through
+storytelling.
+
+\noindent
+From the development perspective that will cover: hooks, project-wide
+helpers, and a full guide to browser testing
+
+\noindent
+I think of the book around four main subjects:
+
+\begin{itemize}
+
+\item{Coding, coding, coding: The reader will be always practicing with examples}
+
+\item{Scaling a codebase: using tests to leverage the organization of the code}
+
+\item{Taking the maximum advantage of Django + Lettuce + Browser Testing}
+
+\item{Rethinking Pythonism: How automated testing can influentiate in conventions, and how to work around it}
+\end{itemize}
+
+\noindent
+
+The book starts thrilling absolute beginners on testing, showing how easy is to write the first test.
+Then it goes further with more complex examples, always emphasizing on
+tips to write more descriptive tests, introduce storytelling.
+
+\noindent
+At that point product managers will be able to understand how to write
+stories as lettuce scenarios, and help developers to focus in the goal
+of the product.
+
+\noindent
+The next step in getting into web development with Django, showing how
+lettuce integrates perfectly with it, and how to take maximum
+advantage of that, going further on outside-in web development with
+Lettuce, Django\footnote{one of the most known web frameworks for python: http://djangoproject.com} and Splinter\footnote{A browser-driver that works with Firefox and Chrome: http://splinter.cobrateam.info/}.
+
+\section*{Chapters Thought}
+This is the very first proposal chapters, it's mostly of what I
+thought for a full guide for BDD in Python.
+
+\subsection*{Introduction to Lettuce}
+\noindent
+Introduces what is Lettuce, why it was made for, who should use, and
+whether it is or not a good choice for testing your application.
+
+\subsection*{Getting Started}
+\noindent
+This chapter starts with a simple guide on how to prepare the environment, using straightforward tool such as PIP\footnote{A hassless python package manager}.
+
+Here we will be driving the reader to the computer and try out what he
+learned in the very first pages.
+
+\subsection*{Motivation for testing}
+\noindent
+Explains the benefits of testing, rambling on how Lettuce is not a
+silver bullet, and how it is supposed to work together with other
+testing tools.
+\noindent
+This is one of the most important parts, I've came along with
+consultancy for some companies and I've seen how lettuce has been
+misused, this chapter will clarify that.
+
+\subsection*{Rethinking the Pythonism}
+\noindent
+In this chapter I propose the reader to rethink python community's
+notorious buzzword: pythonism
+
+\noindent
+Python wealths a PEP\footnote{Acronym for Python Enhancement Proposals} named \textit{"The Zen of Python"}\footnote{http://www.python.org/dev/peps/pep-0020/}, dated of 2004 with some statements that have been taken almost as the "b10 commandments".
+
+\noindent
+Well the times changed since then, and this chapter will show how
+automated testing influence on that, always pointing out Lettuce by
+example.
+
+\subsection*{Outside-in development with Django, Lettuce and Splinter}
+\noindent
+This chapter shows outside-in development in practice, here is where
+developers and product managers will start talking smoothly.
+Developers will learn how to build up a new web project from the
+ground, shaping specifications into tests and making them pass.
+
+\noindent
+Here is where developers will see themselves shipping pieces of work in a timely fashion.
+
+\subsection*{A World of hooks: Anatomy of Terrain and World}
+\noindent
+This chapter will cover all the internals of Lettuce: Hooks, World,
+Terrain.  After going through out this chapter, the reader will become
+a Lettuce expert, how to decouple reusable test helpers into a
+project-wide place, in a very organized way.
+
+\subsection*{Debugging}
+\noindent
+When we speak about Test-driven and Behaviour-driven development,
+tests are not supposed to pass in the first round, but to get passing
+in the last cycle.
+\noindent
+But the problem is when they break, some wrong code was commited to
+the version control repository, how do I debug it?
+\noindent
+This chapter will show all the caveats on debugging lettuce tests.
+\subsection*{Continuous Integration}
+\noindent
+This chapter shows how important is to have a server running the tests
+continuously, how to set up lettuce builds in any CI server, showing
+examples for Build Bot, Jenkins, and Cruise Control.
+
+\section*{Competing Books }
+\noindent
+This proposed book will cover Behaviour-driven development, continuous
+integration and storytelling with Python, I could find no titles in
+the market that cover this field, and absolutely none covering
+Lettuce as a whole.
+
+\noindent
+Although there is a title "Python Testing Cookbook" work in progress,
+and the author, Greg Turnquist, blogged\footnote{http://pythontestingcookbook.posterous.com/good-by-pycukes-hello-lettuce} saying that he is going to cover
+"Acceptance Testing" with Lettuce.
+
+\section*{Marketing Information}
+
+Lettuce, the tool that outlines the subjects covered by the book, is
+being used by more and more companies either big ones like the
+brazillian Globo.com, Mozilla and a crescent number of startups like
+Yipit and Votizen.
+
+\noindent
+"Googling" after "BDD in Python" you will see blog entries and
+presentations about usages of Lettuce.
+
+\noindent
+In September 2010 I gave a lightning talk in DjangoCon2010 in order to introduce Lettuce to the Django community.
+In September 2011, Adam Nelson, CTO of the startup Yipit, gave a techtalk in DjangoCon2011 named "Testing with Lettuce and Splinter"\footnote{http://djangocon.us/schedule/presentations/67/}
+\section*{Promotional Ideas}
+
+I will put ads on Lettuce's oficial documentation website:
+http://lettuce.it, as well as on my blog.
+
+\noindent
+Thus, I will end all of my tech talks mentioning the book as a full
+guide to Lettuce for Acceptance testing and BDD.
+\end{document}
