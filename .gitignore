@@ -2,3 +2,4 @@ build/*.aux
 build/*.pdf
 build/*.log
 build/*.dvi
+*.swp
