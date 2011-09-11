@@ -21,16 +21,13 @@
 This book is intended to be a full guide to lettuce, suitable for
 either developers and product managers.
 
-\noindent
 Developers will be blind tasters of all lettuce internals, and product
 managers will learn how to write down their specifications through
 storytelling.
 
-\noindent
 From the development perspective that will cover: hooks, project-wide
 helpers, and a full guide to browser testing
 
-\noindent
 I think of the book around four main subjects:
 
 \begin{itemize}
@@ -44,20 +41,17 @@ I think of the book around four main subjects:
 \item{Rethinking Pythonism: How automated testing can influentiate in conventions, and how to work around it}
 \end{itemize}
 
-\noindent
 
 The book starts thrilling absolute beginners on testing, showing how easy is to write the first test.
 Then it goes further with more complex examples, always emphasizing on
 tips to write more descriptive tests, introduce storytelling.
 
-\noindent
 At that point product managers will be able to understand how to write
-stories as lettuce scenarios, and help developers to focus in the goal
+stories as Lettuce scenarios, and help developers to focus in the goal
 of the product.
 
-\noindent
 The next step in getting into web development with Django, showing how
-lettuce integrates perfectly with it, and how to take maximum
+Lettuce integrates perfectly with it, and how to take maximum
 advantage of that, going further on outside-in web development with
 Lettuce, Django\footnote{one of the most known web frameworks for python: http://djangoproject.com} and Splinter\footnote{A browser-driver that works with Firefox and Chrome: http://splinter.cobrateam.info/}.
 
@@ -66,81 +60,82 @@ This is the very first proposal chapters, it's mostly of what I
 thought for a full guide for BDD in Python.
 
 \subsection*{Introduction to Lettuce}
-\noindent
 Introduces what is Lettuce, why it was made for, who should use, and
 whether it is or not a good choice for testing your application.
 
 \subsection*{Getting Started}
-\noindent
 This chapter starts with a simple guide on how to prepare the environment, using straightforward tool such as PIP\footnote{A hassless python package manager}.
 
 Here we will be driving the reader to the computer and try out what he
 learned in the very first pages.
 
 \subsection*{Motivation for testing}
-\noindent
 Explains the benefits of testing, rambling on how Lettuce is not a
 silver bullet, and how it is supposed to work together with other
 testing tools.
-\noindent
 This is one of the most important parts, I've came along with
-consultancy for some companies and I've seen how lettuce has been
+consultancy for some companies and I've seen how Lettuce has been
 misused, this chapter will clarify that.
 
 \subsection*{Rethinking the Pythonism}
-\noindent
 In this chapter I propose the reader to rethink python community's
 notorious buzzword: pythonism
 
-\noindent
 Python wealths a PEP\footnote{Acronym for Python Enhancement Proposals} named \textit{"The Zen of Python"}\footnote{http://www.python.org/dev/peps/pep-0020/}, dated of 2004 with some statements that have been taken almost as the "b10 commandments".
 
-\noindent
 Well the times changed since then, and this chapter will show how
 automated testing influence on that, always pointing out Lettuce by
 example.
 
 \subsection*{Outside-in development with Django, Lettuce and Splinter}
-\noindent
 This chapter shows outside-in development in practice, here is where
 developers and product managers will start talking smoothly.
 Developers will learn how to build up a new web project from the
 ground, shaping specifications into tests and making them pass.
 
-\noindent
 Here is where developers will see themselves shipping pieces of work in a timely fashion.
 
-\subsection*{A World of hooks: Anatomy of Terrain and World}
+\subsection*{Organizing your terrain module}
+This chapter will be a handy guide on how to best organize the lettuce
+configurations, I have been questioned by many people about this subject.
+
 \noindent
+This will be probably the first chapter to pitch the attention of
+developers that are not beginners.
+
+\subsection*{A World of hooks: Anatomy of Terrain and World}
 This chapter will cover all the internals of Lettuce: Hooks, World,
 Terrain.  After going through out this chapter, the reader will become
 a Lettuce expert, how to decouple reusable test helpers into a
 project-wide place, in a very organized way.
 
+\subsection*{Hacking on Lettuce}
+This chapter will be a thrilling guide on how to use the internal
+Lettuce API for creating plugins.
+
+There will be a full-featured example: A Lettuce plugin that sends
+email reports for every test suite ran.
+And the entire internal API will be covered.
+
 \subsection*{Debugging}
-\noindent
 When we speak about Test-driven and Behaviour-driven development,
 tests are not supposed to pass in the first round, but to get passing
 in the last cycle.
-\noindent
 But the problem is when they break, some wrong code was commited to
 the version control repository, how do I debug it?
-\noindent
-This chapter will show all the caveats on debugging lettuce tests.
+This chapter will show all the caveats on debugging Lettuce tests.
+
 \subsection*{Continuous Integration}
-\noindent
 This chapter shows how important is to have a server running the tests
 continuously, how to set up lettuce builds in any CI server, showing
 examples for Build Bot, Jenkins, and Cruise Control.
 
 \section*{Competing Books }
-\noindent
 This proposed book will cover Behaviour-driven development, continuous
 integration and storytelling with Python, I could find no titles in
 the market that cover this field, and absolutely none covering
 Lettuce as a whole.
 
-\noindent
 Although there is a title "Python Testing Cookbook" work in progress,
 and the author, Greg Turnquist, blogged\footnote{http://pythontestingcookbook.posterous.com/good-by-pycukes-hello-lettuce} saying that he is going to cover
 "Acceptance Testing" with Lettuce.
@@ -152,19 +147,493 @@ being used by more and more companies either big ones like the
 brazillian Globo.com, Mozilla and a crescent number of startups like
 Yipit and Votizen.
 
-\noindent
 "Googling" after "BDD in Python" you will see blog entries and
 presentations about usages of Lettuce.
 
-\noindent
-In September 2010 I gave a lightning talk in DjangoCon2010 in order to introduce Lettuce to the Django community.
-In September 2011, Adam Nelson, CTO of the startup Yipit, gave a techtalk in DjangoCon2011 named "Testing with Lettuce and Splinter"\footnote{http://djangocon.us/schedule/presentations/67/}
+In September 2010 I gave a lightning talk in DjangoCon2010 in order to
+introduce Lettuce to the Django community.
+
+In September 2011, Adam Nelson, CTO of the startup Yipit, gave a
+techtalk in DjangoCon2011 named "Testing with Lettuce and
+Splinter"\footnote{http://djangocon.us/schedule/presentations/67/}
+
 \section*{Promotional Ideas}
 
 I will put ads on Lettuce's oficial documentation website:
 http://lettuce.it, as well as on my blog.
 
+Thus, I will mention the lettuce book in all of my tech talks,
+introducing it as a full guide for acceptance testing with Lettuce.
+
+\section*{My Bio}
+
+I'm Gabriel Falcão, 23 years old, of whence I've spent 11 hacking. My
+graduation was massively focused in Free Software, in that time I've
+got interested in Python and wrote Guake\footnote{A drop-down terminal for GNOME: http://guake.org/}.
+
+In 2008 I got hired by globo.com and spent 3 years working with
+many agile software development techniques such as Scrum, XP.
+
+In March 2010 I wanted to use Cucumber with Django, but integrating
+Python and Ruby wasn't a really neat experience, then I wrote Lettuce,
+and released the first version in June.
+
+In the March 2011 I left globo.com and travelled to USA to give
+consultancy in Lettuce.
+
+\section*{About the sample chapter}
+
+The following sample chapter is a thorough guide of how to clean and
+organize "terrain", the conventional module that holds hooks and
+project-wide, generic steps.
+
+\section*{Sample Chapter - "Organizing your terrain module"}
+
+At this point you are already familiar with \texttt{terrain}, a python
+module that Lettuce will always try to import before running the tests
+themselves.
+
+In this chapter you will see functional examples of \texttt{terrain.py}
+
+\subsection*{Where to place it}
+
+The \texttt{terrain} module must be always in the directory you are
+running the command line utility from.
+
 \noindent
-Thus, I will end all of my tech talks mentioning the book as a full
-guide to Lettuce for Acceptance testing and BDD.
+Below a pseudocode of how lettuce loads the \textit{terrain} module.
+
+\footnotesize
+\begin{verbatim}
+try to load a module named "terrain"
+if (the module exists)
+    try to import it
+    if (that cause an exception)
+        show the original traceback
+else
+    move on
+\end{verbatim}
+
+\noindent
+Then there is a small difference between how lettuce behave for
+free-style projects or Django projects.
+
+\noindent
+Consider that lettuce does this:
+
+\footnotesize
+\begin{verbatim}
+if (it is a django project)
+    if (settings.LETTUCE_APPS
+
+try to load a module named "terrain"
+if (the module exists)
+    try to import it
+    if (that cause an exception)
+        show the original traceback
+else
+    move on
+\end{verbatim}
+
+\normalsize
+
+\subsection*{Implementing the module: file vs. package}
+
+As you saw in the previous chapters, it's really straightforward to
+implement terrain as a file: just create a \texttt{terrain.py} file
+and place hooks in there.
+
+Although as your project grows and get more complex, the terrain file gets too clutered and may bring some serious problems for your development workflow, namely:
+
+\begin{itemize}
+\item{If you have a long file, it's just so easy to get merge conflicts}
+\item{Mixing contextually different code is just awkward and hard to maintain}
+\item{Terrain is the place to put the project-wide features, which are usually generic, thus it tend to come out in a reasonably big ammout}
+\end{itemize}
+
+\subsubsection*{The problem: terrain.py long and clutered}
+
+Let's use one of the examples from the last chapter, a Django project
+that uses Lettuce and Splinter for browser testing.
+
+\noindent
+So given this structure:
+
+\footnotesize
+\begin{verbatim}
+/Users/gabrielfalcao/myproject/
+                         | - __init__.py
+                         | - manage.py
+                         | - settings.py
+                         | - terrain.py
+                         | - urls.py
+                         | - some_app/
+                             | - features/
+                             | - features/some-test.feature
+                                     | - step_definitions/
+                                     | - step_definitions/some-definitions.py
+\end{verbatim}
+\normalsize
+
+\noindent
+Let's say that in this case the \textit{terrain} file will hold some
+Splinter configurations, generic steps and database cleanup actions.
+
+\subsubsection*{example contents from terrain.py:}
+
+\footnotesize
+\begin{verbatim}
+from lettuce import *
+from lettuce.django import django_url
+from splinter.browser import Browser
+from django.core.urlresolvers import reverse
+from django.contrib.auth.models import User
+
+# browser driver stuff
+@before.each_scenario
+def prepare_browser(scenario):
+    world.browser = Browser('webdriver.firefox')
+
+@after.each_scenario
+def cleanse_browser(scenario):
+    world.browser.quit()
+    del world.browser
+
+# helper functions
+@world.absorb
+def goto_url(url, *args, **kw):
+    world.browser.visit(django_url(reverse(url, args=args, kwargs=kwargs)))
+
+# database cleanse
+@before.each_scenario
+def create_some_test_users(scenario):
+    world.objects.filter(email__iendswith="lettuce.it").delete()
+    world.user = User.objects.create_user(
+        username="test1",
+        email="test1@lettuce.it",
+        password="123456",
+    )
+    world.superuser = User.objects.create_user(
+        username="admin1",
+        email="admin1@lettuce.it",
+        password="123456",
+    )
+    world.superuser.is_staff = True
+    world.superuser.is_superuser = True
+    world.superuser.save()
+
+@after.each_scenario
+def delete_test_users(scenario):
+    world.objects.filter(email__iendswith="lettuce.it").delete()
+
+# some project-wide steps
+@step(ur"I am logged in as an admin user")
+def i_am_logged_in_as_admin(step):
+    world.goto_url("login_page")
+    world.browser.fill("username", world.superuser.username)
+    world.browser.fill("password", "123456")
+    world.browser.find_by_id("login-button").first.click()
+
+@step(ur"I am logged in as a regular user")
+def i_am_logged_in_as_regular(step):
+    world.goto_url("login_page")
+    world.browser.fill("username", world.user.username)
+    world.browser.fill("password", "123456")
+    world.browser.find_by_id("login-button").first.click()
+
+\end{verbatim}
+\normalsize
+
+\subsubsection*{Conclusion}
+You can see how \texttt{terrain.py} can easily become really clutered,
+a lot of functions with different responsabilities tangled with
+decorators and browser logic.
+
+\subsubsection*{The solution: terrain as a package}
+
+Yes! This old-school simple technique of turning a python module file
+into a package will fit.
+
+Considering the previous example, we could think of this new project
+structure:
+
+\newpage
+
+\footnotesize
+\begin{verbatim}
+/Users/gabrielfalcao/myproject/
+                         | - __init__.py
+                         | - manage.py
+                         | - settings.py
+                         | - terrain/
+                             | - __init__.py
+                             | - browser.py
+                             | - steps.py
+                             | - helpers.py
+                         | - urls.py
+                         | - some_app/
+                             | - features/
+                             | - features/some-test.feature
+                                     | - step_definitions/
+                                     | - step_definitions/some-definitions.py
+\end{verbatim}
+\normalsize
+
+\subsubsection*{Anatomy of the package}
+
+\hspace{2pt}
+
+\noindent
+\large\texttt{terrain/\_\_init\_\_.py}\footnotesize
+
+\hspace{1pt}
+
+\noindent
+
+Notice there is some semantic order here:
+\begin{itemize}
+\item{Helpers are imported first, so that their functions will be available for the next imports}
+\item{Browser and any other files that holds site-specific features}
+\end{itemize}
+\begin{verbatim}
+from terrain.helpers import *
+from terrain.browser import *
+from terrain.steps import *
+\end{verbatim}
+
+\hspace{2pt}
+
+\noindent
+\large\texttt{terrain/browser.py}\footnotesize
+\newline
+\begin{verbatim}
+from lettuce import *
+from splinter.browser import Browser
+
+@before.each_scenario
+def prepare_browser(scenario):
+    world.browser = Browser('webdriver.firefox')
+
+@after.each_scenario
+def cleanse_browser(scenario):
+    world.browser.quit()
+    del world.browser
+\end{verbatim}
+
+\newpage
+\noindent
+\large\texttt{terrain/helpers.py}\footnotesize
+\newline
+\begin{verbatim}
+from lettuce import *
+from lettuce.django import django_url
+from django.core.urlresolvers import reverse
+
+
+@world.absorb
+def goto_url(url, *args, **kw):
+    world.browser.visit(django_url(reverse(url, args=args, kwargs=kwargs)))
+\end{verbatim}
+
+\hspace{2pt}
+
+\noindent
+\large\texttt{terrain/steps.py}\footnotesize
+
+\hspace{1pt}
+
+\noindent
+Notice that now we need only one import, although there is some
+repetitive code here. But don't worry, in the next section you will
+see a really clever way to refactor this kind of step definitions.
+
+\begin{verbatim}
+from lettuce import *
+
+# some project-wide steps
+
+@step(ur"I am logged in as admin")
+def i_am_logged_in_as_admin(step):
+    world.goto_url("login_page")
+    world.browser.fill("username", world.superuser.username)
+    world.browser.fill("password", "123456")
+    world.browser.find_by_id("login-button").first.click()
+
+@step(ur"I am logged in as a regular user")
+def i_am_logged_in(step):
+    world.goto_url("login_page")
+    world.browser.fill("username", world.user.username)
+    world.browser.fill("password", "123456")
+    world.browser.find_by_id("login-button").first.click()
+\end{verbatim}
+\normalsize
+
+\subsubsection*{A deeper look into the @world.absorb decorator}
+
+Whenever you import lettuce with a wildcard, it keeps caching
+everything that was monkey patched\footnote{Monkey Patch: the act of
+assign new, and dynamic attributes to objects that were already
+initialized } into world, that is why the
+\texttt{terrain/\_\_init\_\_.py} implementation above make imports in
+a semantic, reasonable order.
+
+\noindent
+And that is also the preferable way to interchange information between
+your defined steps. That said, the first thing that may occur in your
+mind is: "What if I need to interchange functions, and end up with a
+possible cyclic-dependency hell ?"
+
+\noindent
+Well my friend, I introduce you "@world.absorb" a decorator that
+lettuce places into \texttt{world} right before you import it.
+
+\noindent
+The role of this decorator is actually really simple, so let's
+understand it better, by example.
+
+\noindent
+So let's consider the implementation of \texttt{terrain/helpers.py},
+it could be written without the absorb decorator, in this way:
+
+\footnotesize
+\begin{verbatim}
+from lettuce import world
+from lettuce.django import django_url
+from django.core.urlresolvers import reverse
+
+def my_goto_url_helper(url, *args, **kw):
+    world.browser.visit(django_url(reverse(url, args=args, kwargs=kwargs)))
+
+world.goto_url = my_goto_url_helper
+\end{verbatim}
+\normalsize
+
+\noindent
+Notice above the "dumb" assignment of the
+\texttt{my\_goto\_url\_helper} function to \texttt{world}. In order to
+avoid this and make your test code look leaner, whenever you want to
+put helper functions available across the project, just use the
+\texttt{@world.absorb} decorator.
+
+\noindent
+Now I invite you to take another look on the implementation of
+\texttt{terrain/helpers.py} that uses the decorator.
+
+\noindent
+Can you understand why is that there?
+
+\noindent
+Well, it is such a nice feature, let's see one more example of usage
+for \texttt{@world.absorb}, this time we are going to refactor the
+login steps above.
+
+\noindent
+You can notice that both login steps do pretty much the same thing,
+the only difference is that \textit{"I am logged in as admin"} uses
+\texttt{@world.superuser.username} when filling the username textbox,
+and \textit{"I am logged in as admin"} uses
+\texttt{@world.user.username}.
+
+\noindent
+Let's follow step-by-step in a solution for this repeated code
+
+\begin{enumerate}
+\item{Create a separate generic function, and make the different step definitions just call it}
+
+\footnotesize
+\begin{verbatim}
+from lettuce import *
+
+def generic_login(username, password):
+    world.goto_url("login_page")
+    world.browser.fill("username", username)
+    world.browser.fill("password", password)
+    world.browser.find_by_id("login-button").first.click()
+
+@step(ur"I am logged in as a regular user")
+def i_am_logged_in_as_regular(step):
+    generic_login(world.user.username, "123456")
+
+@step(ur"I am logged in as an admin user")
+def i_am_logged_in_as_admin(step):
+    generic_login(world.superuser.username, "123456")
+\end{verbatim}
+\normalsize
+
+We can see some interesting facts in this change, namely: the
+\texttt{generic\_login} function is completely agnostic of user roles,
+but is complete enough to complete the entire user login flow.
+
+
+\item{Now we can create a single, simple generic step definition}
+
+\footnotesize
+\begin{verbatim}
+from lettuce import *
+
+def generic_login(username, password):
+    world.goto_url("login_page")
+    world.browser.fill("username", username)
+    world.browser.fill("password", password)
+    world.browser.find_by_id("login-button").first.click()
+
+@step(ur"I am logged in as an? (regular|admin) user")
+def i_am_logged_in(step, kind):
+    user = kind == "admin" and world.superuser or world.user
+    generic_login(user.username, "123456")
+
+\end{verbatim}
+\normalsize
+
+\noindent
+Nice, at this point our test code is a lot cleaner, "good to go", I'd
+say.  Nevertheless, considering the subject covered by previous
+chapter, it might be really interesting to hang the
+\texttt{generic\_login} function in \texttt{world} so that
+semantically created step definitions could make use of it across the
+entire project.
+
+\noindent
+We will achieve that in the next item
+
+\newpage
+
+\item{Turn \texttt{generic\_login} into a helper}
+
+\hspace{0.2pt}
+
+\noindent
+\large New contents of \texttt{terrain/helpers.py}\footnotesize
+\newline
+\begin{verbatim}
+from lettuce import *
+from lettuce.django import django_url
+from django.core.urlresolvers import reverse
+
+
+@world.absorb
+def goto_url(url, *args, **kw):
+    world.browser.visit(django_url(reverse(url, args=args, kwargs=kwargs)))
+
+@world.absorb
+def generic_login(username, password):
+    world.goto_url("login_page")
+    world.browser.fill("username", username)
+    world.browser.fill("password", password)
+    world.browser.find_by_id("login-button").first.click()
+\end{verbatim}
+
+\noindent
+\large New contents of \texttt{terrain/steps.py}\footnotesize
+
+\begin{verbatim}
+from lettuce import *
+
+@step(ur"I am logged in as an? (regular|admin) user")
+def i_am_logged_in(step, kind):
+    user = kind == "admin" and world.superuser or world.user
+    world.generic_login(user.username, "123456")
+\end{verbatim}
+\end{enumerate}
+
 \end{document}
